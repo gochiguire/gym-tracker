@@ -4,271 +4,63 @@
   padding: 0;
 }
 
-body {
+html, body {
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-  background: #f5f5f5;
-  color: #111;
-  font-size: 14px;
-  line-height: 1.5;
 }
 
-/* Layout */
+/* Login page */
 .center-screen {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  background: #f0f2f5;
 }
 
-.dashboard {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-/* Header */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.header h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  color: #555;
-}
-
-/* Panels */
-.panels {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-
-.panel {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  flex: 1;
-  min-width: 280px;
-}
-
-.panel-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.75rem;
-}
-
-.panel h2 {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #555;
-  font-weight: 600;
-}
-
-/* Lists */
-.item-list {
-  list-style: none;
-  margin-top: 0.5rem;
-}
-
-.item-list li {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #f0f0f0;
-  flex-wrap: wrap;
-}
-
-.item-list li:last-child {
-  border-bottom: none;
-}
-
-.item-name {
-  font-weight: 500;
-  flex: 1;
-}
-
-.item-tag {
-  font-size: 0.75rem;
-  background: #f0f0f0;
-  color: #555;
-  padding: 0.15rem 0.5rem;
-  border-radius: 99px;
-}
-
-.item-sub {
-  font-size: 0.75rem;
-  color: #888;
-  width: 100%;
-}
-
-.empty {
-  color: #aaa;
-  font-style: italic;
-  font-size: 0.875rem;
-}
-
-/* Forms */
-.inline-form {
-  background: #fafafa;
-  border: 1px solid #e8e8e8;
-  border-radius: 4px;
-  padding: 0.75rem;
-  margin-bottom: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-input[type="text"],
-input[type="number"],
-select {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 0.4rem 0.6rem;
-  font-size: 0.875rem;
-  font-family: inherit;
-  background: #fff;
-}
-
-input[type="text"]:focus,
-input[type="number"]:focus,
-select:focus {
-  outline: none;
-  border-color: #555;
-}
-
-/* Checkbox group */
-.checkbox-group {
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 0.5rem;
-}
-
-.checkbox-group legend {
-  font-size: 0.75rem;
-  color: #888;
-  padding: 0 0.25rem;
-}
-
-.checkbox-label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.2rem 0;
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
-/* Set row in session form */
-.set-row {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.set-name {
-  flex: 1;
-  font-size: 0.875rem;
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.set-row input {
-  width: 70px;
-  flex: none;
-}
-
-/* Buttons */
-button {
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.875rem;
-  border: none;
-  border-radius: 4px;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.btn-primary {
-  background: #111;
-  color: #fff;
-  padding: 0.45rem 1rem;
-}
-
-.btn-primary:hover:not(:disabled) {
-  background: #333;
-}
-
-.btn-secondary {
-  background: transparent;
-  color: #555;
-  border: 1px solid #ccc;
-  padding: 0.35rem 0.75rem;
-}
-
-.btn-secondary:hover {
-  background: #f0f0f0;
-}
-
-.btn-icon {
-  background: transparent;
-  color: #555;
-  font-size: 1.1rem;
-  padding: 0.1rem 0.4rem;
-  line-height: 1;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.btn-icon:hover {
-  background: #f0f0f0;
-}
-
-/* Login */
 .login-box {
   text-align: center;
-  padding: 2rem;
+  padding: 2.5rem 2rem;
   background: #fff;
-  border: 1px solid #ddd;
   border-radius: 8px;
-  min-width: 300px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
 .login-box h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .login-box p {
   color: #666;
+  font-size: 0.95rem;
+}
+
+.btn-google {
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  transition: background 0.15s;
+}
+
+.btn-google:hover {
+  background: #f5f5f5;
 }
 
 .error {
-  color: #c0392b;
+  color: #d32f2f;
   font-size: 0.875rem;
 }
